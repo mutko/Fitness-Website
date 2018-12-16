@@ -1,14 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Branko Bozovic">
+    <meta name="keywords" content="Practicing HTML, CSS and JS">
     <title>Fitness Club WebPage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     
 </head>
 <body>
-    <h1>Fitness Club</h1>
+    <!-- Page Header -->
+    <header class="pageHeader">
+
+        <div class="headerLogo">
+            <p>Athletic club<br>
+                <span>Your fitness doctor</span>
+            </p>
+        </div><!-- Logo -->
+
+        <!-- Page Main Navigation -->
+        <nav class="pageNav">
+            <ul class="navList">
+                <li class="navItem">
+                    <a href="index.html" class="navLink" title="Index page of website">Home</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLink" title="Our proffesional trainers">Trainers</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLink" title="Features we provide">Features</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLink" title="Who are we">About us</a>
+                </li>
+                <li class="navItem">
+                    <a href="#" class="navLink" title="Contact us">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- END Navigation-->
+
+        <!-- Page Banner -->
+        <div class="banner"></div><!-- END banner -->
+
+    </header><!-- END Page Header section -->
+    
+    <!-- Services We Provide -->
+    <section class="ourServices">
+        <div class="services">
+            <h3>Our services</h3>
+            <p>Lorem ipsum...</p>
+            <a href="#" class="readMore" title="Features we provide">Read more</a>
+        </div><!-- END Services -->
+
+        <!-- Services Icons -->
+        <div class="servicesIcons">
+
+            <!-- previous (left) icon  -->
+            <a href="#" title="Previous services" class="icon previousIcon">
+                &lt;
+            </a>
+
+            <!-- Single Services Icon - Yoga -->
+            <div class="servicesIconsSingle">
+                <a href="#">
+                    <img src="" alt="Yoga icon">
+                    <p class="servicesIconsText">Yoga</p>
+                </a>
+            </div><!-- END Single Services Icon - Yoga -->
+
+            <!-- Single Services Icon - Weighting -->
+            <div class="servicesIconsSingle">
+                <a href="#">
+                    <img src="" alt="Weighting icon">
+                    <p class="servicesIconsText">Weighting</p>
+                </a>
+            </div><!-- END Single Services Icon - Weighting -->
+
+            <!-- Single Services Icon - Martial Arts -->
+            <div class="servicesIconsSingle">
+                <a href="#">
+                    <img src="" alt="Martial Arts icon">
+                    <p class="servicesIconsText">Martial Arts</p>
+                </a>
+            </div><!-- END Single Services Icon - Martial Arts -->
+
+            <!-- Single Services Icon - Barbell -->
+            <div class="servicesIconsSingle">
+                <a href="#">
+                    <img src="" alt="Barbell icon">
+                    <p class="servicesIconsText">Barbell</p>
+                </a>
+            </div><!-- END Single Services Icon - Barbell -->      
+
+            <!-- next (right arrow) icon -->
+            <a href="#" title="Next services" class="icon nextIcon">
+                &gt;
+            </a>
+    
+        </div><!-- END Services Icons -->
+    </section><!-- END Our Services -->
+    
+    <!-- Experts & Trainers -->
+    <section class="ourTrainers">
+        <h2 class="sectionTitle">Our 
+            <span class="sectionTitleInner">experts &amp; trainers</span>
+        </h2>
+
+        <div class="container">
+            <!-- previous (left) icon  -->
+            <a href="#" title="Previous services" class="icon previousIcon">
+                &lt;
+            </a>
+
+            <div class="containerInner">
+
+                <!-- tile -->
+                <section class="tile">
+                    <img src="" alt="Jonh Smith profile image" class="tileImg">
+                    <div class="tileContent">
+                        <ul class="tileSocial">
+                            <li>
+                                <a href="#">
+                                    <i>F</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>T</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>I</i>
+                                </a>
+                            </li>
+                        </ul><!-- endntile soical icons list -->
+                        <p class="tileText">Weight trainer
+                            <span class="tileTextTitle">Jonh Smith</span>
+                        </p>
+                    </div><!-- end tile contnet-->
+                </section><!-- end tile -->
+
+                <!-- tile -->
+                <section class="tile">
+                    <img src="" alt="Adam Luis profile image" class="tileImg">
+                    <div class="tileContent">
+                        <ul class="tileSocial">
+                            <li>
+                                <a href="#">
+                                    <i>F</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>T</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>I</i>
+                                </a>
+                            </li>
+                        </ul><!-- endntile soical icons list -->
+                        <p class="tileText">Weight trainer
+                            <span class="tileTextTitle">Adam Luis</span>
+                        </p>
+                    </div><!-- end tile contnet-->
+                </section><!-- end tile -->
+            
+                <!-- tile -->
+                <section class="tile">
+                    <img src="" alt="Maria Smith profile image" class="tileImg">
+                    <div class="tileContent">
+                        <ul class="tileSocial">
+                            <li>
+                                <a href="#">
+                                    <i>F</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>T</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i>I</i>
+                                </a>
+                            </li>
+                        </ul><!-- end tile soical icons list -->
+                        <p class="tileText">Weight trainer
+                            <span class="tileTextTitle">Maria Smith</span>
+                        </p>
+                    </div><!-- end tile contnet-->
+                </section><!-- end tile -->       
+
+            </div><!-- END Container inner-->
+
+            <!-- next (right arrow) icon -->
+            <a href="#" title="Next services" class="icon nextIcon">
+                &gt;
+            </a>
+            
+        </div><!-- END Container-->
+
+    </section><!-- END Our Experts & Trainers -->
+
+    <!-- Our Story (Our Blog on JPEG) -->
+    <section class="ourStory">
+
+        <!-- Container-->
+        <div class="container">
+            <article class="story">
+                <h2 class="sectionTitle">Our 
+                    <span class="sectionTitleInner">story</span>
+                </h2>
+                <p>Lorem ipsum...</p>
+                <a href="#" class="btn" title="Read our story">Read more</a>
+            </article><!-- Story -->
+        </div><!-- END Container-->
+
+        <section class="weProvide">
+            <div class="container">
+
+                <section class="weProvideService">
+                    <img src="" alt="Free consultation icon">
+                    <h4 class="weProvideTitle">Free consultation</h4>
+                    <p class="provideText">Lorem ipsum...</p>
+                </section>
+
+                <section class="weProvideService">
+                    <img src="" alt="Excellent service icon">
+                    <h4 class="weProvideTitle">Excellent service</h4>
+                    <p class="provideText">Lorem ipsum...</p>
+                </section>
+
+                <section class="weProvideService">
+                    <img src="" alt="Best trainers icon">
+                    <h4 class="weProvideTitle">Best trainers</h4>
+                    <p class="provideText">Lorem ipsum...</p>
+                </section>
+
+                <section class="weProvideService">
+                    <img src="" alt="More programs icon">
+                    <h4 class="weProvideTitle">More programs</h4>
+                    <p class="provideText">Lorem ipsum...</p>
+                </section>
+
+            </div><!-- container -->
+        </section><!-- END We Provide -->
+
+    </section><!-- END Our Story -->
+
+    <!-- Clients Reviews -->
+    <section class="ourClientsReview container">
+       
+        <h2 class="sectionTitle">Our 
+            <span class="sectionTitleInner">story</span>
+        </h2>
+
+        <div class="ourClientsReviewInner">
+
+            <article class="clientReview">
+                <img src="#" alt="Marshal Smith Image" class="clientImg">
+                <div class="clientReviewText">
+                    <h4 class="clientName">Marshal Smith</h4>
+
+                    <!-- Client Review Social Icons -->
+                    <ul class="clientSocial">
+                        <li>
+                            <a href="#">
+                                <i>F</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>T</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>I</i>
+                            </a>
+                        </li>
+                    </ul><!-- end client social icons list -->
+                    <!-- Star Rating -->
+                    <ul class="clientSocial">
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                    </ul><!-- end star rating -->
+                    <p class="clientText">Lorem <ipsum class=""></ipsum></p>
+                </div><!-- Client Review Text -->
+            </article><!-- END Client Review-->
+
+            <article class="clientReview">
+                <img src="#" alt="Marshal Smith Image" class="clientImg">
+                <div class="clientReviewText">
+                    <h4 class="clientName">Marshal Smith</h4>
+
+                    <!-- Client Review Social Icons -->
+                    <ul class="clientSocial">
+                        <li>
+                            <a href="#">
+                                <i>F</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>T</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>I</i>
+                            </a>
+                        </li>
+                    </ul><!-- end client social icons list -->
+                    <!-- Star Rating -->
+                    <ul class="clientSocial">
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                        <li>
+                            <a href="#">&#9733;</a>
+                        </li>
+                    </ul><!-- end star rating -->
+                    <p class="clientText">Lorem <ipsum class=""></ipsum></p>
+                </div><!-- Client Review Text -->
+            </article><!-- END Client Review-->
+
+        </div><!-- END our Clients Review Inner -->
+
+    </section><!-- END Clients Reviews -->
+
+    
 </body>
 </html>
