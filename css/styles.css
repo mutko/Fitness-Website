@@ -351,15 +351,15 @@ img {
     position: relative;
 }
 
-.headerLogoOuter > h1 {
-    margin: 0;
-    font-size: 1.5rem;
+.headerBrand > h1 {
+    margin: 0;  
 }
-.headerLogoInner {
+.brandInner {
     text-transform: capitalize;
     font-weight: 100;
     letter-spacing: 1.2px;
     color: #ff4c06;
+    font-size: 1.5rem;
 }
 .slogan {
     color: #fff;
@@ -576,6 +576,70 @@ textarea:focus {
 
 /* ====
 ===== Page Footer */
+.pageFooter {
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+}
+.footerSocial {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerSocial a {
+    color: #fff;
+}
+.linkToSocial i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: .8em;
+    font-size: 1rem;
+}
+.footerSocial li:nth-child(1) {
+    background-color: #4267b2;
+}
+.footerSocial li:nth-child(2) {
+    background-color: #38A1F3;
+}
+.footerSocial li:nth-child(3) {
+    background-color: #BD081C;
+}
+.footerSocial li:nth-child(4) {
+    background-color: #C71585;
+}
+.fa-youtube::before {
+    left: -2px;
+    position: relative;
+} /* had to tweek youtube icon a little */
+
+.footerSocial li:nth-child(5) {
+    background-color: #0077B5;
+}
+
+.footerBrand {
+    text-align: left;
+    border: 2px solid #fff;
+    padding: 1em 1.5em;
+}
+.footerBrand p {
+    margin: 0;
+}
+.footerLink {
+    color: #fff;
+}
+.footerLink i {
+    color: #ff4c06;
+}
+.pageFooter hr {
+    border-color: #ff4c06;
+}
+.copy {
+    color: #fff;
+}
+
 
 
 
@@ -666,6 +730,9 @@ textarea:focus {
         flex: 1;
     }
 
+    .copy br {
+        display: none;
+    }
 } /* END large devices */
 
 
