@@ -263,11 +263,10 @@
     display: none;
   }
 
-
 /* ====
 ==== colors for site 
     
-    ORANGE #f15b21 rgb(241, 91, 33)
+    ORANGE #ff4c06 rgb(241, 91, 33)
 
 ==== /*
 
@@ -306,20 +305,28 @@ h4 {
     text-transform: uppercase;
 }
 .sectionTitleInner {
-    color: #f15b21;
+    color: #ff4c06;
 }
 a {
     text-decoration: none;
 }
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .container {
     margin: 0 auto;
+    padding: 0 1em;
 } 
 
 
 /* ====
 ====== banner */
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://via.placeholder.com/600");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+                    rgba(0, 0, 0, 0.5)), 
+                      url("https://via.placeholder.com/600");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -352,7 +359,7 @@ a {
     text-transform: capitalize;
     font-weight: 100;
     letter-spacing: 1.2px;
-    color: #f15b21;
+    color: #ff4c06;
 }
 .slogan {
     color: #fff;
@@ -367,14 +374,14 @@ a {
     right: .4em;
     border: 0;
     background-color: transparent;
-    color: #f15b21;
+    color: #ff4c06;
     font-size: 2em;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
 }
 .menuToggle:focus {
-    outline-color: #f15b21;
+    outline-color: #ff4c06;
 }
 .navDropdown {
     display: none;
@@ -396,10 +403,171 @@ a {
     display: block;
     padding: 1em 1em 1em 0;
     font-size: .875rem;
-    color: #f15b21;
+    color: #ff4c06;
     text-transform: uppercase;
     font-family: Helvetica, Arial, sans-serif;
 }
+
+
+/* ====
+===== Our Sevices */
+
+
+
+/* ====
+===== Our Experts and Trainers */
+
+/* .containerInner {
+    display: flex;
+}
+.tile {
+    flex: 1;
+} */
+figure {
+    margin: 0;
+}
+.tile {
+    margin: 0 auto;
+}
+.tileContent {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 10px solid #ccc;
+    padding: 1em 3em;
+}
+.tileSocial {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tileText {
+    text-transform: capitalize;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.tileTextInner {
+    display: block;
+    text-transform: uppercase;
+    color: #ff4c06;
+    font-weight: bold;
+}
+
+/* ====
+===== Our Story */
+
+
+
+
+
+
+/* ====
+===== Our Story */
+.weProvide {
+    background-color: #ff4c06;
+    color: #fff;
+    text-align: center;
+}
+.weProvideService {
+    padding: 2em 4em;
+}
+.weProvideTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+
+/* ====
+===== Our CLients Review */
+
+
+
+
+
+/* ====
+===== Join Us */
+.joinUs {
+    background-color: #ff4c06;
+    text-align: center;
+}
+.joinUsLink {
+    color: #fff;
+    letter-spacing: 1.3px;
+    word-spacing: 2px;
+}
+.joinUs h2 {
+    display: inline-block;
+    padding: .75em 1.5em;
+    margin: 0;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.joinUsLink span:first-child {
+    font-variant: small-caps;
+    font-size: 1.1rem;
+}
+.joinUsLink span:last-child {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* ====
+===== Contact */
+.contact {
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    color: #fff;
+}
+
+.contactText p + p {
+    text-transform: uppercase;
+    color: #ff4c06;   
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.form-field,
+textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #ff4c06;
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    padding: .8em 1em;
+    margin-bottom: 1em;
+}
+.form-field:focus,
+textarea:focus {
+    border-color: rgba(255, 255, 255, .7);
+    outline: none;
+}
+::placeholder { 
+    color: rgba(255, 255, 255, .7);
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
+    opacity: 1; /* Firefox */
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: #ff4c06;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+/* ====
+===== Gallery */
+
+
+
+
+/* ====
+===== Page Footer */
+
 
 
 
@@ -408,7 +576,13 @@ a {
 @media all and (min-width: 35em) {
     .container {
         max-width: 33em;
+        padding: 0;
     } 
+
+    .weProvideService {
+        padding: 2em 6em;
+    }
+
 } /* END small devices */
 
 
@@ -418,6 +592,7 @@ a {
     .container {
         max-width: 46em;
     } 
+
     .pageNav {
         display: flex;
         align-items: center;
@@ -434,8 +609,29 @@ a {
         margin-left: auto;
     }
     .navList {
-        
         display: flex;
+    }
+
+    .weProvideFlex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .weProvideService {
+        padding: .5em 1em;
+        flex: 1 0 50%;
+    }
+
+    .contact .container {
+        display: flex;
+        align-items: center;
+    }
+    .contactText {
+        flex: 1;
+
+        text-align: left;
+    }
+    .contactForm {
+        flex: 1;
     }
 } /* END medium devices */
 
@@ -450,6 +646,14 @@ a {
     .navList > li > a {
         padding-right: 3em;
     }
+
+    .weProvideFlex {
+        flex-wrap: nowrap;
+    }
+    .weProvideService {
+        flex: 1;
+    }
+
 } /* END large devices */
 
 
