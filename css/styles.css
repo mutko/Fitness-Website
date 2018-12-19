@@ -561,8 +561,17 @@ textarea:focus {
 }
 /* ====
 ===== Gallery */
-
-
+.gallery {
+    margin: 1em;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1em;
+}
+.galleryImg {
+    width: 100%;
+    box-shadow: 0 0 .5em #666;
+}
 
 
 /* ====
@@ -627,11 +636,14 @@ textarea:focus {
     }
     .contactText {
         flex: 1;
-
         text-align: left;
     }
     .contactForm {
         flex: 1;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
     }
 } /* END medium devices */
 
@@ -667,4 +679,6 @@ textarea:focus {
     .headerLogoOuter > h1 {
         font-size: 2rem;
     }
+
+
 } /* END extra large devices */
