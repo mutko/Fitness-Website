@@ -11,7 +11,7 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     
 </head>
 <body>
@@ -19,11 +19,13 @@
     <header class="pageHeader">
 
         <!-- Page Main Navigation -->
-        <nav class="pageNav">
+        <nav class="pageNav" id="mainMenu">
 
-            <div class="headerLogo">
-                <h1>Athletic club<br>
-                    <span>Your fitness doctor</span>
+            <div class="headerLogoOuter">
+                <h1>
+                    <a href="index.html" title="Index page of website" class="headerLogoInner">Athletic club<br>
+                        <span class="slogan">Your fitness doctor</span>
+                    </a>
                 </h1>
             </div><!-- Logo -->
 
@@ -33,7 +35,7 @@
             </button>
 
             <!-- Dropdown for hide on mobile size -->
-            <div class="dropdown">
+            <div class="navDropdown">
                 <ul class="navList">
                     <li class="navItem">
                         <a href="index.html" class="navLink" title="Index page of website">Home</a>
@@ -62,58 +64,62 @@
 
     <!-- Services We Provide -->
     <section class="ourServices">
-        <div class="services">
-            <h2 class="sectionTitle">Our services</h2>
-            <p>Lorem ipsum...</p>
-            <a href="#" class="readMore" title="Features we provide">Read more</a>
-        </div><!-- END Services -->
+        <div class="container">
 
-        <!-- Services Icons -->
-        <div class="servicesIcons">
+            <div class="services">
+                <h2 class="sectionTitle">Our services</h2>
+                <p>Lorem ipsum...</p>
+                <a href="#" class="readMore" title="Features we provide">Read more</a>
+            </div><!-- END Services -->
 
-            <!-- previous (left) icon  -->
-            <a href="#" title="Previous services" class="icon previousIcon">
-                &lt;
-            </a>
+            <!-- Services Icons -->
+            <div class="servicesIcons">
 
-            <!-- Single Services Icon - Yoga -->
-            <div class="servicesIconsSingle">
-                <a href="#">
-                    <img src="" alt="Yoga icon">
-                    <p class="servicesIconsText">Yoga</p>
+                <!-- previous (left) icon  -->
+                <a href="#" title="Previous services" class="icon previousIcon">
+                    &lt;
                 </a>
-            </div><!-- END Single Services Icon - Yoga -->
 
-            <!-- Single Services Icon - Weighting -->
-            <div class="servicesIconsSingle">
-                <a href="#">
-                    <img src="" alt="Weighting icon">
-                    <p class="servicesIconsText">Weighting</p>
+                <!-- Single Services Icon - Yoga -->
+                <div class="servicesIconsSingle">
+                    <a href="#">
+                        <img src="" alt="Yoga icon">
+                        <p class="servicesIconsText">Yoga</p>
+                    </a>
+                </div><!-- END Single Services Icon - Yoga -->
+
+                <!-- Single Services Icon - Weighting -->
+                <div class="servicesIconsSingle">
+                    <a href="#">
+                        <img src="" alt="Weighting icon">
+                        <p class="servicesIconsText">Weighting</p>
+                    </a>
+                </div><!-- END Single Services Icon - Weighting -->
+
+                <!-- Single Services Icon - Martial Arts -->
+                <div class="servicesIconsSingle">
+                    <a href="#">
+                        <img src="" alt="Martial Arts icon">
+                        <p class="servicesIconsText">Martial Arts</p>
+                    </a>
+                </div><!-- END Single Services Icon - Martial Arts -->
+
+                <!-- Single Services Icon - Barbell -->
+                <div class="servicesIconsSingle">
+                    <a href="#">
+                        <img src="" alt="Barbell icon">
+                        <p class="servicesIconsText">Barbell</p>
+                    </a>
+                </div><!-- END Single Services Icon - Barbell -->      
+
+                <!-- next (right arrow) icon -->
+                <a href="#" title="Next services" class="icon nextIcon">
+                    &gt;
                 </a>
-            </div><!-- END Single Services Icon - Weighting -->
+        
+            </div><!-- END Services Icons -->
 
-            <!-- Single Services Icon - Martial Arts -->
-            <div class="servicesIconsSingle">
-                <a href="#">
-                    <img src="" alt="Martial Arts icon">
-                    <p class="servicesIconsText">Martial Arts</p>
-                </a>
-            </div><!-- END Single Services Icon - Martial Arts -->
-
-            <!-- Single Services Icon - Barbell -->
-            <div class="servicesIconsSingle">
-                <a href="#">
-                    <img src="" alt="Barbell icon">
-                    <p class="servicesIconsText">Barbell</p>
-                </a>
-            </div><!-- END Single Services Icon - Barbell -->      
-
-            <!-- next (right arrow) icon -->
-            <a href="#" title="Next services" class="icon nextIcon">
-                &gt;
-            </a>
-    
-        </div><!-- END Services Icons -->
+        </div><!-- END Container-->
     </section><!-- END Our Services -->
     
     <!-- Experts & Trainers -->
@@ -372,7 +378,7 @@
 
     <!-- Join Us -->
     <section class="joinUs">
-        <h2 class="joinUsText">
+        <h2 class="sectionTitle joinUsText">
             <a href="#" class="joinUsLink">Join</a> to 
             <span class="joinUsTitle">Athletic club</span>
         </h2>
@@ -388,7 +394,7 @@
             </div>
 
             <div class="contactForm">
-                <h2>Get in touch by</h2>
+                <h2 class="sectionTitle">Get in touch by</h2>
                 <form action="">
                     <input class="form-field" type="text" name="name" placeholder="Name">
                     <input class="form-field" type="text" name="email" placeholder="E-mail">
@@ -447,5 +453,20 @@
             <p class="copy">AthleticClub&copy;2018-2019 All Rights Reserved | Terms of use and Privacy Policy</p>
         </div><!-- END container -->
     </footer><!-- END Page Footer-->
+
+
+    <script>
+
+        (function () {
+            var button = document.getElementById('menuToggle');
+
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                var menu = document.getElementById('mainMenu'); 
+                menu.classList.toggle('isOpen');
+            });
+        })();
+</script>
+
 </body>
 </html>
