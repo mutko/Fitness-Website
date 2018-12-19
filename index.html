@@ -7,6 +7,10 @@
     <meta name="keywords" content="Practicing HTML, CSS and JS">
     <title>Fitness Club WebPage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     
 </head>
@@ -23,23 +27,32 @@
                 </h1>
             </div><!-- Logo -->
 
-            <ul class="navList">
-                <li class="navItem">
-                    <a href="index.html" class="navLink" title="Index page of website">Home</a>
-                </li>
-                <li class="navItem">
-                    <a href="#" class="navLink" title="Our proffesional trainers">Trainers</a>
-                </li>
-                <li class="navItem">
-                    <a href="#" class="navLink" title="Features we provide">Features</a>
-                </li>
-                <li class="navItem">
-                    <a href="#" class="navLink" title="Who are we">About us</a>
-                </li>
-                <li class="navItem">
-                    <a href="#" class="navLink" title="Contact us">Contact</a>
-                </li>
-            </ul>
+            <!-- Toggle Menu button -->
+            <button id="menuToggle" class="menuToggle">
+                <span class="fas fa-bars"></span>
+            </button>
+
+            <!-- Dropdown for hide on mobile size -->
+            <div class="dropdown">
+                <ul class="navList">
+                    <li class="navItem">
+                        <a href="index.html" class="navLink" title="Index page of website">Home</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink" title="Our proffesional trainers">Trainers</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink" title="Features we provide">Features</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink" title="Who are we">About us</a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink" title="Contact us">Contact</a>
+                    </li>
+                </ul>
+            </div><!-- dropdown-->
+
         </nav><!-- END Navigation-->
 
         <!-- Page Banner -->
