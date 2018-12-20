@@ -483,7 +483,7 @@ figure {
 
 
 /* ====
-===== Our Story */
+===== Services we Provide */
 .weProvide {
     background-color: #ff4c06;
     color: #fff;
@@ -502,10 +502,44 @@ figure {
 
 /* ====
 ===== Our CLients Review */
-
-
-
-
+.clientReview {
+    display: flex;
+    align-items: flex-start;
+    background-color: #000;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.clientReviewBody {
+    padding: 1.5em;
+}
+.clientReviewImg {
+    align-self: stretch;
+    border-top-left-radius: 4px; 
+    border-bottom-left-radius: 4px;
+}
+.clientReviewBody > h3 {
+    color: #ff4c06;
+    text-transform: uppercase;
+    margin: 0;
+}
+.clientSocial {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.socialIcons > li + li {
+    padding-left: 1em;
+}
+.socialIcons > li > a {
+    color: #fff;
+}
+.starRating > li > a {
+    color: yellow;
+}
+.starRating > li + li {
+    padding-left: .5em;
+}
 
 /* ====
 ===== Join Us */
