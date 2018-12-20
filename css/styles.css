@@ -314,6 +314,8 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
+    border: 0;
 }
 .container {
     margin: 0 auto;
@@ -427,19 +429,38 @@ figure {
     margin: 0;
 }
 .tile {
-    margin: 0 auto;
+    max-width: 330px;
+    margin: 0 auto 100px;
+    position: relative;
 }
 .tileContent {
     text-align: center;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    border: 10px solid #ccc;
-    padding: 1em 3em;
+    outline: 10px solid rgba(255, 255, 255, .2);
+    background-color: #fff;
+    padding: .8em 1em 0;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 10;
 }
 .tileSocial {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    padding-left: 0;
+}
+.tileSocial i {
+    color: #ff4c06;
+}
+.tileSocial li + li {
+    padding-left: .5em;
+}
+.tileSocial .fa-square {
+    transform: rotate(45deg);
+    font-weight: 100;
 }
 .tileText {
     text-transform: capitalize;
@@ -450,6 +471,7 @@ figure {
     text-transform: uppercase;
     color: #ff4c06;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /* ====
@@ -580,11 +602,14 @@ textarea:focus {
     background-color: rgba(0, 0, 0, .7);
     text-align: center;
 }
+.pageFooterInner {
+    max-width: 30em;
+    margin: 0 auto;
+}
 .footerSocial {
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    max-width: 500px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -618,11 +643,10 @@ textarea:focus {
 .footerSocial li:nth-child(5) {
     background-color: #0077B5;
 }
-
 .footerBrand {
     text-align: left;
     border: 2px solid #fff;
-    padding: 1em 1.5em;
+    padding: 1em 1.5em 1em 2em;
 }
 .footerBrand p {
     margin: 0;
@@ -729,7 +753,7 @@ textarea:focus {
     .weProvideService {
         flex: 1;
     }
-
+    
     .copy br {
         display: none;
     }
