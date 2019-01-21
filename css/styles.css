@@ -281,6 +281,14 @@
 *::after {
     box-sizing: inherit;
 }
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    content: " ";
+}
+.clearfix::after {
+    clear: both;
+}
 html {
     background-color: #fff;
     height: 100%;
@@ -326,11 +334,9 @@ img {
 /* ====
 ====== banner */
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
-                    rgba(0, 0, 0, 0.5)), 
-                      url("https://via.placeholder.com/600");
+    background-image:                       url("../img/bannerBg.jpg");
     height: 100%;
-    background-position: center;
+    background-position: center 70px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -343,6 +349,7 @@ img {
     transform: translate(-50%, -50%);
     color: white;
 } */
+
 
 
 /* ====
@@ -413,7 +420,123 @@ img {
 
 /* ====
 ===== Our Sevices */
-
+.ourServices {
+    position: relative;
+}
+.services {
+    height: 447px;
+    width: 447px;
+    margin-left: -223.5px;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    top: -223px;
+    left: 50%;
+}
+.services::before {
+    content: "";
+    background: url('../img/servicesBg.jpg') no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: -92px;
+    z-index: -1;
+    transform: rotate(45deg);
+    transform-origin: 0 0 0;    
+}
+.services::after {
+    content: "";
+    background: none repeat scroll 0 0 black;
+    background-color: #ff4c06;
+    border: 30px solid #e6e6e6;
+    height: 100%;
+    width: 100%;
+    opacity: .9;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(45deg)
+}
+.servicesImg {
+    background: url('../img/border.png') no-repeat scroll center bottom transparent;
+    float: left;
+    margin-top: -150px;
+    padding-bottom: 1px;
+    width: 100%;
+}
+.servicesImg img {
+    margin: 0 auto;
+}
+.servicesText {
+    float: left;
+    margin-top: 25px;
+    width: 100%;
+}
+.servicesText .sectionTitle {
+    color: #fff;
+    float: left;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    overflow: hidden;
+    padding: 0 80px 20px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+    margin: 0;
+}
+.servicesText p {
+    color: #f2f1f1;
+    float: left;
+    padding: 0 85px 20px;
+    width: 100%;
+    letter-spacing: 1.2px;
+}
+.servicesText a {
+    background: none repeat scroll 0 0 rgba(30, 30, 30, .3);
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 70%;
+}
+.whiteBorder {
+    background: none repeat scroll 0 0 #fff;
+    width: 65px;
+    height: 322px;
+    position: absolute;
+    bottom: -75px;
+    left: 100px;
+    transform: rotate(-45deg);
+}
+.whiteBorder::before {
+    content: "";
+    background: url('../img/serviceBg.png') repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 90px;
+    width: 92px;
+    position: absolute;
+    left: -45px;
+    top: -45px;
+    transform: rotate(45deg);
+}
+.whiteBorder.right {
+    left: auto;
+    right: 100px;
+    top: 200px;
+    transform: rotate(45deg);
+}
+.whiteBorder.right::before {
+    width: 65px;
+    height: 65px;
+    left: auto;
+    right: -1px;
+    top: -64px;
+    transform: rotate(90deg);
+}
 
 
 /* ====
@@ -427,6 +550,12 @@ img {
 } */
 figure {
     margin: 0;
+
+     /* privremeno margin top 
+    da ne ulazi u section iznda 
+    zbog svih onih position absolute */
+    padding-top: 100px;
+    
 }
 .tile {
     max-width: 330px;
@@ -515,8 +644,6 @@ figure {
 }
 .clientReviewImg {
     align-self: stretch;
-    border-top-left-radius: 4px; 
-    border-bottom-left-radius: 4px;
 }
 .clientReviewBody > h3 {
     color: #ff4c06;
@@ -541,6 +668,29 @@ figure {
     padding-left: .5em;
 }
 
+.photoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+
+}
+.photoGridItem {
+    width: auto;
+    height: 100px;
+    border: 1px solid lightgray;
+}
+.photoGridItemOrange {
+    background-color: #ff4c06;
+}
+.photoGridItemBlack {
+    background-color: #000;
+}
+.photoGridItemImage {
+    background: url('https://via.placeholder.com/100') no-repeat center;
+    background-size: cover;
+}
+.hideOnSmall {
+    display: none;
+}
 /* ====
 ===== Join Us */
 .joinUs {
@@ -752,6 +902,10 @@ textarea:focus {
         flex: 1 0 50%;
     }
 
+    .clientsReviewContainer {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
     .contact .container {
         display: flex;
         align-items: center;
