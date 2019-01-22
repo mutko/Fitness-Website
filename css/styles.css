@@ -493,27 +493,48 @@ img {
 } */
 figure {
     margin: 0;
-
-     /* privremeno margin top 
-    da ne ulazi u section iznda 
-    zbog svih onih position absolute */
-    padding-top: 100px;
-    
 }
 .tile {
     max-width: 330px;
     margin: 0 auto 100px;
     position: relative;
 }
+.tileOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(241, 91, 33, .9);
+}
+.tile:hover .tileOverlay {
+    opacity: 1;
+}
+.overlayText {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 2em 2em 1em;
+   /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+}
 .tileContent {
     text-align: center;
     width: 70%;
     margin: 0 auto;
-    outline: 10px solid rgba(255, 255, 255, .2);
+    outline: 15px solid rgba(255, 255, 255, .2);
     background-color: #fff;
     padding: .8em 1em 0;
     position: absolute;
-    bottom: -50%;
+    bottom: -38%;
     left: 50%;
     transform: translate(-50%, -60%);
     z-index: 10;
@@ -537,6 +558,7 @@ figure {
 .tileText {
     text-transform: capitalize;
     font-family: Helvetica, Arial, sans-serif;
+    font-size: .9rem;
 }
 .tileTextInner {
     display: block;
