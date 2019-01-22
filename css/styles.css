@@ -353,7 +353,9 @@ img {
 .btn.btnOutline:hover {
     background-color: rgba(0, 0, 0, .7);
 }
-
+.spacing {
+    padding: 5em 0;
+}
 /* ====
 ====== banner */
 .banner {
@@ -498,12 +500,11 @@ img {
 /* ====
 ===== Our Experts and Trainers */
 
-/* .containerInner {
+.containerInner {
     display: flex;
+    flex-wrap: wrap;
 }
-.tile {
-    flex: 1;
-} */
+
 figure {
     margin: 0;
 }
@@ -545,6 +546,10 @@ figure {
     left: 50%;
     transform: translate(-50%, -60%);
     z-index: 10;
+}
+.tileImg {
+    max-width: 330px;
+    height: 350px;
 }
 .tileSocial {
     list-style: none;
@@ -650,7 +655,8 @@ figure {
 .photoGrid {
     display: grid;
     grid-template-columns: repeat(3, minmax(80px, 1fr));
-
+    grid-auto-rows: 100px;
+    grid-row-gap: 0;
 }
 .photoGridItem {
     width: auto;
@@ -672,8 +678,12 @@ figure {
 }
 /* ====
 ===== Join Us */
+.joinContact {
+    background: url('../img/joinContact.jpg') no-repeat center;
+    background-size: cover;
+}
 .joinUs {
-    background-color: #ff4c06;
+    background-color: rgba(241, 91, 33, .9);
     text-align: center;
 }
 .joinUsLink {
@@ -700,16 +710,21 @@ figure {
 /* ====
 ===== Contact */
 .contact {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .9);
     text-align: center;
     color: #fff;
 }
-
+.contactText p {
+    margin: 0;
+}
 .contactText p + p {
     text-transform: uppercase;
     color: #ff4c06;   
     font-size: 1.5rem;
     font-weight: bold;
+}
+.questionMark {
+    font-size: 3rem;
 }
 .form-field,
 textarea {
@@ -751,7 +766,12 @@ textarea:focus {
 /* ====
 ===== Page Footer */
 .pageFooter {
-    background-color: rgba(0, 0, 0, .7);
+    background: linear-gradient(
+                rgba(0, 0, 0, .95), 
+                rgba(0, 0, 0, .95)
+                ),
+                url('../img/footerBg.jpg') no-repeat center;
+    background-size: cover;
     text-align: center;
 }
 .pageFooterInner {
@@ -799,6 +819,7 @@ textarea:focus {
     text-align: left;
     border: 2px solid #fff;
     padding: 1em 1.5em 1em 2em;
+    margin: 2em 0;
 }
 .footerBrand p {
     margin: 0;
@@ -1029,7 +1050,10 @@ textarea:focus {
     .clientsReviewContainer {
         display: grid;
         grid-template-columns: 3fr 2fr;
+        grid-gap: 2em;
+        align-items: center;
     }
+
     .contact .container {
         display: flex;
         align-items: center;
@@ -1045,6 +1069,9 @@ textarea:focus {
     .gallery {
         grid-template-columns: repeat(6, 1fr);
     }
+
+
+
 } /* END medium devices */
 
 
@@ -1070,6 +1097,18 @@ textarea:focus {
     }
     .servicesIcons {
         padding: 0;
+    }
+    .photoGrid {
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+    }
+    .hideOnSmall {
+        display: block;
+    }
+    .contactText {
+        margin-left: 10em;
+    }
+    .contactForm {
+        margin-right: 5em;
     }
     .copy br {
         display: none;
