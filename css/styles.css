@@ -290,7 +290,7 @@
     clear: both;
 }
 html {
-    background-color: #fff;
+    background-color: #efefef;
     height: 100%;
 }
 body {
@@ -478,8 +478,10 @@ img {
     height: 150px;
     border: 5px solid #ff4c06;
     color: #666;
+    background-color: #fff;
     transform: rotate(45deg);
     margin: 3em 2em;
+    box-shadow: 0 0 .5em #666;
 }
 .serviceIcon:hover {
     background-color: #ff4c06;
@@ -510,8 +512,9 @@ figure {
 }
 .tile {
     max-width: 330px;
-    margin: 0 auto 100px;
+    margin: 0 auto 8em;
     position: relative;
+    box-shadow: 0 0 .5em #666;
 }
 .tileOverlay {
     position: absolute;
@@ -542,7 +545,7 @@ figure {
     background-color: #fff;
     padding: .8em 1em 0;
     position: absolute;
-    bottom: -38%;
+    bottom: -48%;
     left: 50%;
     transform: translate(-50%, -60%);
     z-index: 10;
@@ -582,9 +585,16 @@ figure {
 
 /* ====
 ===== Our Story */
-
 .ourStory {
-    background-color: #013A6B;
+    background: linear-gradient(
+        rgba(0, 0, 0, .8), 
+        rgba(0, 0, 0, .8)
+        ),
+        url('../img/ourStoryBg.jpg') no-repeat center;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3em 0 4em;
 }
 .story {
     color: #fff;
@@ -611,8 +621,6 @@ figure {
 }
 
 
-
-
 /* ====
 ===== Our CLients Review */
 .clientReview {
@@ -622,6 +630,7 @@ figure {
     border-radius: 4px;
     color: #fff;
     margin-bottom: 20px;
+    box-shadow: 0 0 .5em #666;
 }
 .clientReviewBody {
     padding: 1.5em;
@@ -1025,12 +1034,9 @@ textarea:focus {
     ===== Our Story only for medium
     ===== and large devices */
     .ourStory {
-        position: relative;
         background: url('../img/ourStoryBg.jpg') no-repeat;
         background-position: right center;
-        background-size: cover;
-        background-attachment: fixed;
-
+        padding: 0 0 4em 0;
     }
     .ourStory::before {
         content: '';
