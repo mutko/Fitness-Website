@@ -335,7 +335,7 @@ img {
     width: 100%;
     padding: 1em;
     background-color: #ff4c06;
-    border: none;
+    border: 2px solid #ff4c06;
     border-radius: 4px;
     color: #fff;
     text-transform: uppercase;
@@ -345,13 +345,12 @@ img {
 }
 .btn.btnOutline {
     background: transparent;
-    border: 2px solid #ff4c06;
     width: auto;
     display: inline-block;
     padding: .5em 1.5em;
 }
 .btn.btnOutline:hover {
-    background-color: rgba(0, 0, 0, .7);
+    background: #ff4c06;
 }
 .spacing {
     padding: 5em 0;
@@ -604,7 +603,6 @@ figure {
 .story .sectionTitle {
     text-align: left;
 }
-
 /* ====
 ===== Services we Provide */
 .weProvide {
@@ -620,23 +618,31 @@ figure {
     font-weight: bold;
 }
 
-
 /* ====
 ===== Our CLients Review */
 .clientReview {
     display: flex;
-    align-items: flex-start;
-    background-color: #000;
+    align-items: center;
+    background-color: #2b2b2b;
     border-radius: 4px;
     color: #fff;
     margin-bottom: 20px;
     box-shadow: 0 0 .5em #666;
+    height: 300px;
 }
 .clientReviewBody {
     padding: 1.5em;
+    flex: 3;
 }
 .clientReviewImg {
-    align-self: stretch;
+    flex: 1;
+    background: url('../img/client2.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.clientReview + .clientReview .clientReviewImg {
+    background-image: url('../img/fittnesGuy.png');
 }
 .clientReviewBody > h3 {
     color: #ff4c06;
@@ -661,27 +667,6 @@ figure {
     padding-left: .5em;
 }
 
-.photoGrid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(80px, 1fr));
-    grid-auto-rows: 100px;
-    grid-row-gap: 0;
-}
-.photoGridItem {
-    width: auto;
-    height: 100px;
-    border: 1px solid lightgray;
-}
-.photoGridItemOrange {
-    background-color: #ff4c06;
-}
-.photoGridItemBlack {
-    background-color: #000;
-}
-.photoGridItemImage {
-    background: url('https://via.placeholder.com/100') no-repeat center;
-    background-size: cover;
-}
 .hideOnSmall {
     display: none;
 }
@@ -756,7 +741,9 @@ textarea:focus {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
     opacity: 1; /* Firefox */
 }
-
+.contactForm .btn:hover {
+    background: transparent;
+}
 /* ====
 ===== Gallery */
 .gallery {
@@ -1036,6 +1023,7 @@ textarea:focus {
     .ourStory {
         background: url('../img/ourStoryBg.jpg') no-repeat;
         background-position: right center;
+        background-attachment: fixed;
         padding: 0 0 4em 0;
     }
     .ourStory::before {
@@ -1053,13 +1041,20 @@ textarea:focus {
         position: relative;
         z-index: 10;
     }
-    .clientsReviewContainer {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-gap: 2em;
-        align-items: center;
-    }
 
+    .clientReview {
+        float: left;
+        width: 49%;
+    }
+    .clientReview + .clientReview {
+        float: right;
+    }
+    .ourClientsReview .container {
+        overflow: auto;
+    }
+    .joinUs {
+        clear: both;
+    }
     .contact .container {
         display: flex;
         align-items: center;
@@ -1103,12 +1098,6 @@ textarea:focus {
     }
     .servicesIcons {
         padding: 0;
-    }
-    .photoGrid {
-        grid-template-columns: repeat(4, minmax(80px, 1fr));
-    }
-    .hideOnSmall {
-        display: block;
     }
     .contactText {
         margin-left: 10em;
